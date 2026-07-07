@@ -32,7 +32,7 @@ spec:
               key: mongo-password
         - name: DB_URL
           valueFrom:
-            ConfigMapKeyRef:
+            configMapKeyRef:
               name: mongo-config
               key: mongo-url
 
@@ -49,5 +49,5 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-      NodePort: 30100
+      nodePort: 30100
 
